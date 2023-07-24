@@ -18,9 +18,9 @@ var bookO={
 for(var iName=0; iName<bookMark.length  ; iName ++){
 if( siteName.value == bookMark[iName].name){
     window.alert("This name is used you can use anther name to book yor URL")
-}
 
 }
+else{
 
      if(bookO.myU.toLowerCase().includes("https://")==true){
          if (regex.test(bookO.myU ) ==true && regexNam.test(bookO.name) ==true){
@@ -56,6 +56,8 @@ clearData();
 }
  
 
+}
+}
 }
 function displayUrl(){
 var box ='';
