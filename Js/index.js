@@ -18,9 +18,10 @@ var bookO={
 for(var iName=0; iName<bookMark.length  ; iName ++){
 if( siteName.value == bookMark[iName].name){
     window.alert("This name is used you can use anther name to book yor URL")
-
+    clearData();
+    return;
 }
-else{
+}
 
      if(bookO.myU.toLowerCase().includes("https://")==true){
          if (regex.test(bookO.myU ) ==true && regexNam.test(bookO.name) ==true){
@@ -37,7 +38,8 @@ Wrong !!
  characters Site URL must be a valid one`); 
 clearData();
 }
-}else{
+}
+else{
     bookO.myU="https://"+bookO.myU
     if (regex.test(bookO.myU)==true && regexNam.test(bookO.name) ==true){
         bookMark.push(bookO);
@@ -53,12 +55,10 @@ clearData();
         clearData();
 
          }
-}
- 
 
-}
-}
-}
+        }
+
+    }
 function displayUrl(){
 var box ='';
 for(var i=0;i<bookMark.length;i++){
